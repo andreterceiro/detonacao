@@ -27,3 +27,30 @@ function onDeviceReady() {
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     //document.getElementById('deviceready').classList.add('ready');
 }
+
+
+let contador = 6;
+var timer1 = window.setInterval(
+    function() {
+        iniciarContagem();
+        clearInterval(timer1);
+    },
+    3000
+);
+
+function iniciarContagem() {
+    var timer2 = window.setInterval(
+        function() {
+            contador = contador - 1;
+            if (contador == 0) {
+                $("#center").html("Boom!!!!");
+                navigator.vibrate(5000);
+                console.log("Boom !!");
+                clearInterval(timer2);
+            } else {
+                $("center").html(contador);
+            }
+        },
+        1000
+    )
+}

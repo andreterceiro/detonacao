@@ -1,12 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
-    <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+    <name>Detonação</name>
+    <description>O app que explode o seu celular</description>
+    <author email="-" href="https://cordova.apache.org">
+        
     </author>
     <content src="index.html" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <icon src="res/bomba.png" />
+    <icon src="res/bomba.jpg" />
+    <platform name="android">
+        <config-file parent="/manifest" target="app/src/main/AndroidManifest.xml" xmlns:android="http://schemas.android.com/apk/res/android">
+            <permission android:name="android.permission.VIBRATE" />
+        </config-file>
+    </platform>
 </widget>
+

@@ -41,27 +41,8 @@
     </head>
     <body style="background-color: #000";>
 
-        <center id="center">5</center>
+        <center id="center">Toque na<br />tela por favor</center>
         <script src="cordova.js"></script>
         <script src="js/index.js"></script>
     </body>
-    <script>
-        $(function() {
-            let contador = 5;
-            let timer = window.setInterval(
-                function () {
-                    contador = contador - 1;
-                    if (contador == 0) {
-                        $("#center").html("Boom!!!!");
-                        console.log("Boom !!");
-                        clearInterval(timer);
-                        navigator.vibrate(5000);
-                    } else {
-                        $("center").html(contador);
-                    }
-                },
-                1000
-            )
-        });
-    </script>
 </html>
